@@ -104,56 +104,26 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 
     
-    //SOMETHING IN SECTION IS PRESSED
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //CLICK on the details cell
-        if indexPath.row == 1{
-            //segue into the details view controller
-        }
-    }
-    
-    //HOW MANY SECTIONS THERE ARE
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return posts.count
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.row == 0{
-            return CGFloat.init(45)
-        }
-        return CGFloat.init(230)
+        return CGFloat.init(190)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         //idenfication cell + Details cell
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.section]
         
-        if indexPath.row == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "IdentificationCell") as! IdentificationCell
-            
-            let user = post["Author"] as! PFUser
-            
-            cell.nameLabel.text = user.username
-            return cell
-        }
-        else{
-            print("AAAA")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! DetailsCell
-            
-//            cell.departureLabel.text = (post["Departure"] as! String)
-//            cell.destinationLabel.text = (post["Destination"] as! String)
-//
-            
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! DetailsCell
         
+        //            cell.departureLabel.text = (post["Departure"] as! String)
+        //            cell.destinationLabel.text = (post["Destination"] as! String)
+        //
+        
+        return cell
        
         
     }

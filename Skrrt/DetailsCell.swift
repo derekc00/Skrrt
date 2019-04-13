@@ -15,12 +15,13 @@ class DetailsCell: UITableViewCell {
     
     @IBOutlet weak var background: UIImageView!
     
-    @IBOutlet weak var moneyBackground: UIImageView!
+    @IBOutlet weak var profilePicture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        background.cornerRadius = 4
-        moneyBackground.setRounded()
+        background.cornerRadius = 11
+        profilePicture.setRounded()
+//        moneyBackground.setRounded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
