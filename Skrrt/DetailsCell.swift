@@ -13,10 +13,11 @@ class DetailsCell: UITableViewCell {
     @IBOutlet weak var departureLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!
     
+    @IBOutlet weak var background: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        background.cornerRadius = 4
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

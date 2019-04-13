@@ -45,7 +45,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let departurePlacemark = MKPlacemark(coordinate: departureCoordinates)
         let departureMapItem = MKMapItem(placemark: departurePlacemark)
-        departureMapItem.name
+//        departureMapItem.name
         mapItems.append(departureMapItem)
 
         
@@ -121,7 +121,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0{
-            return CGFloat.init(65)
+            return CGFloat.init(45)
         }
         return CGFloat.init(230)
     }
@@ -147,9 +147,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("AAAA")
             let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell") as! DetailsCell
             
-            cell.departureLabel.text = (post["Departure"] as! String)
-            cell.destinationLabel.text = (post["Destination"] as! String)
-            
+//            cell.departureLabel.text = (post["Departure"] as! String)
+//            cell.destinationLabel.text = (post["Destination"] as! String)
+//
             
             return cell
         }
