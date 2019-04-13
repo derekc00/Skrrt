@@ -10,6 +10,7 @@
 		6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */; };
 		6D9E4E8C2262040000D44D1C /* IdentificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8B2262040000D44D1C /* IdentificationCell.swift */; };
 		6D9E4E8E2262055A00D44D1C /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */; };
+		6D9E4E9022623FAC00D44D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */; };
 		6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD47E2261E710002E88B7 /* AppDelegate.swift */; };
 		6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD4802261E710002E88B7 /* ViewController.swift */; };
 		6DEBD4842261E710002E88B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEBD4822261E710002E88B7 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6D9E4E8B2262040000D44D1C /* IdentificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationCell.swift; sourceTree = "<group>"; };
 		6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6DEBD47B2261E710002E88B7 /* Skrrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skrrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEBD47E2261E710002E88B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DEBD4802261E710002E88B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */,
 				6D9E4E8B2262040000D44D1C /* IdentificationCell.swift */,
 				6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */,
+				6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */,
 			);
 			path = Skrrt;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */,
 				6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */,
 				6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */,
+				6D9E4E9022623FAC00D44D1C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

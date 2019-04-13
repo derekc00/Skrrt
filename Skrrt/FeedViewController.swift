@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MapKit
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -27,6 +28,58 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func tappedDetailsCell(_ sender: Any) {
+        
+        var mapItems = [MKMapItem]()
+        
+//        performSegue(withIdentifier: "details", sender: nil)
+        
+        
+        let departureLatitude:CLLocationDegrees = 39.048825
+        let departureLongitude:CLLocationDegrees = -120.981227
+        
+        let regionDistance:CLLocationDistance = 1000;
+        let departureCoordinates = CLLocationCoordinate2DMake(departureLatitude, departureLongitude)
+        
+        let departurePlacemark = MKPlacemark(coordinate: departureCoordinates)
+        let departureMapItem = MKMapItem(placemark: departurePlacemark)
+        departureMapItem.name
+        mapItems.append(departureMapItem)
+
+        
+        
+        
+        let destinationLatitude:CLLocationDegrees = 34.039989
+        let destinationLongitude:CLLocationDegrees = -118.255319
+        
+        let destinationCoordinates = CLLocationCoordinate2DMake(destinationLatitude, destinationLongitude)
+        
+        let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinates)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        mapItems.append(destinationMapItem)
+        
+        let regionSpan = MKCoordinateRegion(center: departureCoordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        
+        
+        
+        
+//        mapItem.openMaps(launchOptions: )
+        MKMapItem.openMaps(with: mapItems, launchOptions: options)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "details"{
+            
+        }
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
