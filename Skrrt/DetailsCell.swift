@@ -15,9 +15,12 @@ class DetailsCell: UITableViewCell {
     
     @IBOutlet weak var background: UIImageView!
     
+    @IBOutlet weak var moneyBackground: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         background.cornerRadius = 4
+        moneyBackground.setRounded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,4 +29,14 @@ class DetailsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension UIImageView {
+    
+    
+    func setRounded() {
+        let radius = self.frame.height/2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
 }

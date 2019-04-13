@@ -18,7 +18,7 @@ class IdentificationCell: UITableViewCell {
         super.awakeFromNib()
 
         //makes the image rounded
-        profileImage.cornerRadius = 10
+        profileImage.setRounded()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,3 +28,4 @@ class IdentificationCell: UITableViewCell {
     }
 
 }
+
