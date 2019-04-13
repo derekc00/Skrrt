@@ -14,6 +14,7 @@
 		6DEBD4892261E711002E88B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEBD4872261E711002E88B7 /* LaunchScreen.storyboard */; };
 		6DEBD4942261E711002E88B7 /* SkrrtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD4932261E711002E88B7 /* SkrrtTests.swift */; };
 		6DEBD49F2261E711002E88B7 /* SkrrtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD49E2261E711002E88B7 /* SkrrtUITests.swift */; };
+		6DEBD4AD2261F1E9002E88B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD4AC2261F1E9002E88B7 /* LoginViewController.swift */; };
 		766A2818F1D3A5603CF3B43D /* Pods_SkrrtUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3669271277D7BC1ACBAE653 /* Pods_SkrrtUITests.framework */; };
 		8FEB4FB63A7BCD80911E41C3 /* Pods_Skrrt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1111E0C25CE58EBC1CB5F945 /* Pods_Skrrt.framework */; };
 		FF7806619354425E1FD0A074 /* Pods_SkrrtTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB95AE41BACFA84EA4E26EF7 /* Pods_SkrrtTests.framework */; };
@@ -54,6 +55,7 @@
 		6DEBD49A2261E711002E88B7 /* SkrrtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrrtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEBD49E2261E711002E88B7 /* SkrrtUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkrrtUITests.swift; sourceTree = "<group>"; };
 		6DEBD4A02261E711002E88B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DEBD4AC2261F1E9002E88B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82DA0A8AC22F0624C511060E /* Pods-SkrrtTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrrtTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrrtTests/Pods-SkrrtTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3669271277D7BC1ACBAE653 /* Pods_SkrrtUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrrtUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD87908F9D64F199E737680 /* Pods-Skrrt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skrrt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Skrrt/Pods-Skrrt.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				6DEBD4852261E711002E88B7 /* Assets.xcassets */,
 				6DEBD4872261E711002E88B7 /* LaunchScreen.storyboard */,
 				6DEBD48A2261E711002E88B7 /* Info.plist */,
+				6DEBD4AC2261F1E9002E88B7 /* LoginViewController.swift */,
 			);
 			path = Skrrt;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DEBD4AD2261F1E9002E88B7 /* LoginViewController.swift in Sources */,
 				6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */,
 				6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */,
 			);
