@@ -1,0 +1,6 @@
+framework module Pods_SkrrtTests {
+  umbrella header "Pods-SkrrtTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
