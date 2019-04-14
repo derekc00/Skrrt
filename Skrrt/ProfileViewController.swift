@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import FacebookLogin
+
 
 class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        loginButton.center = view.center
+        
+        view.addSubview(loginButton)
         // Do any additional setup after loading the view.
     }
     

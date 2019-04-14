@@ -8,9 +8,24 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.5.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.37)
+  - FacebookLogin (0.5.0):
+    - Bolts (~> 1.9)
+    - FacebookCore (~> 0.5)
+    - FBSDKCoreKit (~> 4.37)
+    - FBSDKLoginKit (~> 4.37)
+  - FacebookShare (0.5.0):
+    - Bolts (~> 1.9)
+    - FacebookCore (~> 0.5)
+    - FBSDKCoreKit (~> 4.37)
+    - FBSDKShareKit (~> 4.37)
   - FBSDKCoreKit (4.40.0):
     - Bolts (~> 1.9)
   - FBSDKLoginKit (4.40.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.40.0):
     - FBSDKCoreKit
   - Parse (1.17.2):
     - Parse/Core (= 1.17.2)
@@ -20,6 +35,9 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - FBSDKLoginKit
   - Parse
   - SearchTextField
@@ -29,8 +47,12 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - FBSDKShareKit
     - Parse
     - SearchTextField
 
@@ -38,11 +60,15 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
+  FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
+  FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
   FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
+  FBSDKShareKit: 0e45916f4150da485928ae2a17ca021950b194f5
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   SearchTextField: a0992739d4b05dcbb40fb3a5cc6526bd991bdd23
 
-PODFILE CHECKSUM: 52f438b38a7c307dac0ea5ca413811c32102970d
+PODFILE CHECKSUM: 807038efb4c86c22c08b742981f7b653f075944b
 
 COCOAPODS: 1.5.3

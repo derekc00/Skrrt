@@ -11,7 +11,9 @@ target 'Skrrt' do
   	pod "AlamofireImage"
 	pod "SearchTextField"
     pod 'FBSDKLoginKit'
-
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
   target 'SkrrtTests' do
     inherit! :search_paths
