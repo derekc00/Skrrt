@@ -431,13 +431,14 @@
                         <outlet property="departureTextField" destination="Lce-X2-zKO" id="TZl-Vg-9an"/>
                         <outlet property="destinationTextField" destination="Mok-b8-Xlp" id="5Pm-4f-e9X"/>
                         <outlet property="personType" destination="iCD-DK-DyK" id="nNI-hX-X5v"/>
+                        <outlet property="priceLabel" destination="dt5-JQ-U85" id="0Sn-Af-cAt"/>
                         <outlet property="priceTextField" destination="7Yp-Fd-tj3" id="yra-de-5aw"/>
                         <outlet property="returnDate" destination="RUg-Z5-6wC" id="0Nz-od-CHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzr-Wh-ZaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1047.2" y="841.62561576354688"/>
+            <point key="canvasLocation" x="-857" y="935"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="orQ-fy-6hU">

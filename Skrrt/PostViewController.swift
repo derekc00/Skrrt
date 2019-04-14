@@ -50,6 +50,7 @@ class PostViewController: UIViewController {
     @IBOutlet weak var priceTextField: UITextField!
     
     
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
