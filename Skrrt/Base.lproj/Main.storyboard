@@ -315,6 +315,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone X 2" translatesAutoresizingMaskIntoConstraints="NO" id="KA9-P8-68r">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oEr-tI-Lb5" appends="YES" id="yBd-hY-GY4"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="When are you coming back?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8j-jT-ViC">
                                 <rect key="frame" x="16" y="490" width="292" height="29"/>
@@ -459,6 +463,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzr-Wh-ZaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oEr-tI-Lb5">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="qfQ-mE-nXe" id="J9I-xU-QfA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-858.39999999999998" y="934.72906403940885"/>
         </scene>
@@ -548,8 +557,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone X 2" translatesAutoresizingMaskIntoConstraints="NO" id="VIL-Qf-RYH">
-                                <rect key="frame" x="0.0" y="-197" width="521" height="1009"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="F9b-Be-wkL" appends="YES" id="PBF-SM-1Br"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaD-XT-klx">
                                 <rect key="frame" x="16" y="44" width="49" height="35"/>
@@ -662,12 +675,13 @@
                         <outlet property="endingDate" destination="qHq-er-uF1" id="wmu-25-Tft"/>
                         <outlet property="highLowSort" destination="48S-UM-C4u" id="204-hg-T6A"/>
                         <outlet property="startingSchool" destination="HLL-xb-W01" id="Z0m-gZ-qVZ"/>
-                        <segue destination="Ywu-Xx-8jp" kind="show" identifier="filterApplied" id="cpU-iX-I4s"/>
+                        <segue destination="Ywu-Xx-8jp" kind="show" identifier="filteredApplied" id="cpU-iX-I4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBS-LV-xKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="F9b-Be-wkL"/>
             </objects>
-            <point key="canvasLocation" x="-2118" y="2446"/>
+            <point key="canvasLocation" x="-2119.1999999999998" y="2445.8128078817736"/>
         </scene>
         <!--profile page-->
         <scene sceneID="Y1A-Os-YHC">
@@ -890,6 +904,6 @@
         <image name="iPhone X 2 (2)" width="375" height="812"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="39T-qC-GfM"/>
+        <segue reference="cpU-iX-I4s"/>
     </inferredMetricsTieBreakers>
 </document>

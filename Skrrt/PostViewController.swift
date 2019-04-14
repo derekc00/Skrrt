@@ -12,6 +12,10 @@ import Parse
 
 class PostViewController: UIViewController {
 
+    override func viewDidLoad() {
+    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+    }
+    
     let suggestions = [ "CSU Bakersfield",
                         "CSU Channel Islands",
                         "CSU Chico",
@@ -108,6 +112,9 @@ class PostViewController: UIViewController {
         return false
     }
 
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("A3")

@@ -19,6 +19,7 @@ class FilterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         // Do any additional setup after loading the view.
     }
     
@@ -29,7 +30,10 @@ class FilterViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let view = sender as! FeedViewController
+        guard let view = segue.destination as? FeedViewController
+            else{
+                return
+        }
         view.startingSchool = startingSchool.text!
         view.destinationSchool = destinationSchool.text!
         if highLowSort.selectedSegmentIndex == 0{
