@@ -32,6 +32,8 @@ class PostViewController: UIViewController {
                         "UC San Francisco"
     ]
     
+    
+    
     @IBOutlet weak var personType: UISegmentedControl!
     
     @IBOutlet weak var departureTextField: SearchTextField!
@@ -49,25 +51,25 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var priceTextField: UITextField!
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        if comingBackType.selectedSegmentIndex == 0{
+    
+    @IBAction func valueChanged(_ sender: Any) {
+        print(personType.selectedSegmentIndex)
+        if personType.selectedSegmentIndex == 1{
             comingBackLabel.isHidden = true
+            comingBackType.isHidden = true
             returnDate.isHidden = true
+            departureDate.isHidden = true
         }
-        else{
+        else {
+            print(":FDDSF")
             comingBackLabel.isHidden = false
+            comingBackType.isHidden = false
             returnDate.isHidden = false
+            departureDate.isHidden = false
         }
-        
-//        departureTextField.filterStrings(suggestions)
-//        destinationTextField.filterStrings(suggestions)
-        
     }
+    
     
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
