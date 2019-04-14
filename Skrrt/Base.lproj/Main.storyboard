@@ -283,7 +283,11 @@
                         <viewLayoutGuide key="safeArea" id="TQx-T5-qlA"/>
                     </view>
                     <navigationItem key="navigationItem" id="I60-1E-JxV">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="LgV-2j-oyy"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="LgV-2j-oyy">
+                            <connections>
+                                <segue destination="Fjh-L6-wpr" kind="show" id="DGb-s0-nQY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="A8k-fd-Dxg" id="hIX-J6-cmQ"/>
@@ -401,6 +405,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kzK-Dt-5td">
+                                <rect key="frame" x="32" y="80" width="311" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Driver"/>
+                                    <segment title="Rider"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="qfQ-mE-nXe" eventType="valueChanged" id="Pl5-7f-HyI"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fc6-yZ-W9s">
+                                <rect key="frame" x="0.0" y="351" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="576894772.46879303">
+                                    <!--2019-04-14 00:32:52 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EOq-py-RQz"/>
@@ -409,16 +431,18 @@
                     <connections>
                         <outlet property="comingBackLabel" destination="m8j-jT-ViC" id="FfA-fD-afZ"/>
                         <outlet property="comingBackType" destination="tQm-OY-PUm" id="JxA-6j-uIf"/>
+                        <outlet property="departureDate" destination="Fc6-yZ-W9s" id="PZs-Mw-iwW"/>
                         <outlet property="departureTextField" destination="Lce-X2-zKO" id="TZl-Vg-9an"/>
                         <outlet property="destinationTextField" destination="Mok-b8-Xlp" id="5Pm-4f-e9X"/>
-                        <outlet property="priceLabel" destination="dt5-JQ-U85" id="0Sn-Af-cAt"/>
+                        <outlet property="personType" destination="kzK-Dt-5td" id="H4n-9V-zHj"/>
+                        <outlet property="priceLabel" destination="dt5-JQ-U85" id="ab5-L0-rdW"/>
                         <outlet property="priceTextField" destination="7Yp-Fd-tj3" id="yra-de-5aw"/>
                         <outlet property="returnDate" destination="RUg-Z5-6wC" id="0Nz-od-CHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzr-Wh-ZaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="935"/>
+            <point key="canvasLocation" x="-858.39999999999998" y="934.72906403940885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="orQ-fy-6hU">

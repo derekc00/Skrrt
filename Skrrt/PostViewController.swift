@@ -51,7 +51,10 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var priceTextField: UITextField!
     
-
+    
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
 
     
     @IBAction func valueChanged(_ sender: Any) {
