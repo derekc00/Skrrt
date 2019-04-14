@@ -431,7 +431,7 @@
                         <outlet property="departureTextField" destination="Lce-X2-zKO" id="TZl-Vg-9an"/>
                         <outlet property="destinationTextField" destination="Mok-b8-Xlp" id="5Pm-4f-e9X"/>
                         <outlet property="personType" destination="iCD-DK-DyK" id="nNI-hX-X5v"/>
-                        <outlet property="priceLabel" destination="dt5-JQ-U85" id="BTr-t6-20g"/>
+                        <outlet property="priceLabel" destination="dt5-JQ-U85" id="0Sn-Af-cAt"/>
                         <outlet property="priceTextField" destination="7Yp-Fd-tj3" id="yra-de-5aw"/>
                         <outlet property="returnDate" destination="RUg-Z5-6wC" id="0Nz-od-CHs"/>
                     </connections>
