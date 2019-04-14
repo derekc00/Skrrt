@@ -7,10 +7,12 @@ PODS:
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
     - Bolts/Tasks (~> 1.9)
+  - SearchTextField (1.2.2)
 
 DEPENDENCIES:
   - AlamofireImage
   - Parse
+  - SearchTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -18,13 +20,15 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Parse
+    - SearchTextField
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
+  SearchTextField: a0992739d4b05dcbb40fb3a5cc6526bd991bdd23
 
-PODFILE CHECKSUM: 57ffc0d4ef97a326b541a81c8eabc4f24614a06d
+PODFILE CHECKSUM: a950fb07ae1669d7972ef90604d650fed7b7357d
 
 COCOAPODS: 1.5.3

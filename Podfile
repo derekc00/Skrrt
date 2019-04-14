@@ -9,6 +9,7 @@ target 'Skrrt' do
 
 	pod "Parse"
   	pod "AlamofireImage"
+	pod "SearchTextField"
 
   target 'SkrrtTests' do
     inherit! :search_paths

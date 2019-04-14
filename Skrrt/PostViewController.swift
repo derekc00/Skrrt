@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import SearchTextField
+import Parse
 
 class PostViewController: UIViewController {
 
+    let suggestions = [ "CSU Bakersfield",
+                        "CSU Channel Islands",
+                        "CSU Chico",
+                        "CSU Dominguez Hills",
+                        "CSU East Bay",
+                        "CSU Fresno",
+                        "CSU Fullerton",
+                        "Humboldt State University",
+                        "CSU Long Beach",
+                        "CSU Los Angeles",
+                        "UC Berkeley",
+                        "UC Davis",
+                        "UC Irvine",
+                        "UCLA",
+                        "UC Merced",
+                        "UC Riverside",
+                        "UC San Diego",
+                        "UC San Francisco"
+    ]
+    
     @IBOutlet weak var personType: UISegmentedControl!
     
-    @IBOutlet weak var departureTextField: UITextField!
+    @IBOutlet weak var departureTextField: SearchTextField!
     
-    @IBOutlet weak var destinationTextField: UITextField!
+    @IBOutlet weak var destinationTextField: SearchTextField!
+    
     
     @IBOutlet weak var departureDate: UIDatePicker!
     
@@ -24,26 +47,9 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var comingBackLabel: UILabel!
     
+    @IBOutlet weak var priceTextField: UITextField!
     
-    let suggestions = [ "CSU Bakersfield",
-        "CSU Channel Islands",
-        "CSU Chico",
-        "CSU Dominguez Hills",
-        "CSU East Bay",
-        "CSU Fresno",
-        "CSU Fullerton",
-        "Humboldt State University",
-        "CSU Long Beach",
-        "CSU Los Angeles",
-        "UC Berkeley",
-        "UC Davis",
-        "UC Irvine",
-        "UCLA",
-        "UC Merced",
-        "UC Riverside",
-        "UC San Diego",
-        "UC San Francisco"
-    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,12 @@ class PostViewController: UIViewController {
             comingBackLabel.isHidden = false
             returnDate.isHidden = false
         }
+        
+//        departureTextField.filterStrings(suggestions)
+//        destinationTextField.filterStrings(suggestions)
+        
     }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         print("A2")
@@ -104,7 +115,29 @@ class PostViewController: UIViewController {
     }
    
     @IBAction func posting(_ sender: Any) {
+        //pet is like a dictionary
+        let post = PFObject(className: "Posts")
+        post["Departure"] = departureTextField.text
+        post["Destination"] = destinationTextField.text
+        post["Date"] = departureDate.date
+        post["Price"] = Int(priceTextField.text!) ?? 0
+        post["Author"] = PFUser.current()!
+        if comingBackType.selectedSegmentIndex == 0{
+             post["Oneway"] = true
+        }
+        else{
+            post["Oneway"] = false
+        }
+       
         
+        post.saveInBackground { (success, error) in
+            if success{
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            }else{
+                print("error: \(String(describing: error))")
+            }
+        }
         
     }
     

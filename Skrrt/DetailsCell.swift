@@ -17,11 +17,19 @@ class DetailsCell: UITableViewCell {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
+    @IBOutlet weak var seatsLabel: UILabel!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         background.cornerRadius = 11
         profilePicture.setRounded()
 //        moneyBackground.setRounded()
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
