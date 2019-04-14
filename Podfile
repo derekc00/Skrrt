@@ -10,6 +10,8 @@ target 'Skrrt' do
 	pod "Parse"
   	pod "AlamofireImage"
 	pod "SearchTextField"
+    pod 'FBSDKLoginKit'
+
 
   target 'SkrrtTests' do
     inherit! :search_paths

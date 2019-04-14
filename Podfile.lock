@@ -2,7 +2,16 @@ PODS:
   - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - FBSDKCoreKit (4.40.0):
+    - Bolts (~> 1.9)
+  - FBSDKLoginKit (4.40.0):
+    - FBSDKCoreKit
   - Parse (1.17.2):
     - Parse/Core (= 1.17.2)
   - Parse/Core (1.17.2):
@@ -11,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - FBSDKLoginKit
   - Parse
   - SearchTextField
 
@@ -19,6 +29,8 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Parse
     - SearchTextField
 
@@ -26,9 +38,11 @@ SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
+  FBSDKLoginKit: 7a1e411d46acc8834588eca437daf34de42e1d52
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   SearchTextField: a0992739d4b05dcbb40fb3a5cc6526bd991bdd23
 
-PODFILE CHECKSUM: a950fb07ae1669d7972ef90604d650fed7b7357d
+PODFILE CHECKSUM: 52f438b38a7c307dac0ea5ca413811c32102970d
 
 COCOAPODS: 1.5.3
