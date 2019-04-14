@@ -15,6 +15,7 @@
 		6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */; };
 		6D9E4E8E2262055A00D44D1C /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */; };
 		6D9E4E9022623FAC00D44D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */; };
+		6DB8C8782263522500C490C7 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB8C8772263522500C490C7 /* FilterViewController.swift */; };
 		6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD47E2261E710002E88B7 /* AppDelegate.swift */; };
 		6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEBD4802261E710002E88B7 /* ViewController.swift */; };
 		6DEBD4842261E710002E88B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DEBD4822261E710002E88B7 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6DB8C8772263522500C490C7 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		6DEBD47B2261E710002E88B7 /* Skrrt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skrrt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DEBD47E2261E710002E88B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DEBD4802261E710002E88B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				6D7733F42263282E00C5A0D3 /* FacebookViewController.swift */,
 				6D7733F62263296B00C5A0D3 /* ProfileHistoryCell.swift */,
 				6D7733F822632CD000C5A0D3 /* SettingsCell.swift */,
+				6DB8C8772263522500C490C7 /* FilterViewController.swift */,
 			);
 			path = Skrrt;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				6DEBD4AD2261F1E9002E88B7 /* LoginViewController.swift in Sources */,
 				6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */,
 				6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */,
+				6DB8C8782263522500C490C7 /* FilterViewController.swift in Sources */,
 				6D7733F52263282E00C5A0D3 /* FacebookViewController.swift in Sources */,
 				6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */,
 				6D7733F32263004900C5A0D3 /* ProfileViewController.swift in Sources */,

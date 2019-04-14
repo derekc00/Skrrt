@@ -55,7 +55,9 @@ class PostViewController: UIViewController {
     
     @IBOutlet weak var priceLabel: UILabel!
     
-
+    @IBOutlet weak var seatsLabel: UILabel!
+    
+    @IBOutlet weak var seatsTextField: UITextField!
     
     @IBAction func valueChanged(_ sender: Any) {
         print(personType.selectedSegmentIndex)
@@ -64,6 +66,8 @@ class PostViewController: UIViewController {
             comingBackType.isHidden = true
             returnDate.isHidden = true
             departureDate.isHidden = true
+            seatsTextField.isHidden = true
+            seatsLabel.isHidden = true
         }
         else {
             print(":FDDSF")
@@ -71,6 +75,8 @@ class PostViewController: UIViewController {
             comingBackType.isHidden = false
             returnDate.isHidden = false
             departureDate.isHidden = false
+            seatsLabel.isHidden = false
+            seatsTextField.isHidden = false
         }
     }
     
@@ -128,6 +134,8 @@ class PostViewController: UIViewController {
         post["Date"] = departureDate.date
         post["Price"] = Int(priceTextField.text!) ?? 0
         post["Author"] = PFUser.current()!
+        post["Seats"] = Int(seatsTextField.text ?? "1")
+        
         if comingBackType.selectedSegmentIndex == 0{
              post["Oneway"] = true
         }
