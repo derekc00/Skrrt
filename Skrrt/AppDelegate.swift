@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import FacebookCore
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Facebook
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         
         Parse.initialize(
@@ -36,11 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         //            window?.rootViewController = feedNavigationController
         //        }
-        return true
+        return FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions) ?? true
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+//    }
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance()?.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) ?? true
     }
     
     

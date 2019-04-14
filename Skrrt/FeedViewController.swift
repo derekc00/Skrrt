@@ -15,6 +15,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     
     var posts = [PFObject]()
+    var fbposts = [[String: Any]]()
     
     
 
@@ -28,7 +29,31 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
 
         
-        // Do any additional setup after loading the view.
+        //pull data from facebook
+        let url = URL(string: "https://graph.facebook.com/2302470539844395/feed?limit=5&access_token=EAAEq2boOzVsBABi0f8WRRZBYawEuPdWAbHeRw5aLlcDlaMwGJ5BKUbvXhghycVdtGPZCZADJZBUD1VGH1IagI9jQZA0f5zyAYkjCCOA0nclBfCbm3Lv3DZCPL6gNKQuw07pZAtVQqlPHqZBRvkhMDZBdw4owQd9ZCnlwo2kqdy69zpggZDZD")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            // This will run when the network request returns
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                
+                self.fbposts = dataDictionary["data"] as? [[String:Any]] ?? []
+                print(self.fbposts)
+                
+                //Call the functions again after downloading the data
+                self.tableView.reloadData()
+                
+                
+                // TODO: Get the array of movies
+                // TODO: Store the movies in a property to use elsewhere
+                // TODO: Reload your table view data
+                
+            }
+        }
+        task.resume()
     }
     
     
@@ -146,6 +171,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.destinationLabel.text = (post["Destination"] as! String)
         
         let user = post["Author"] as! PFUser
+        
         let imageFile = user["ProfilePicture"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string: urlString)!

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6D7733F12262BEC600C5A0D3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7733F02262BEC600C5A0D3 /* PostViewController.swift */; };
 		6D7733F32263004900C5A0D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7733F22263004900C5A0D3 /* ProfileViewController.swift */; };
+		6D7733F52263282E00C5A0D3 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7733F42263282E00C5A0D3 /* FacebookViewController.swift */; };
+		6D7733F72263296B00C5A0D3 /* ProfileHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7733F62263296B00C5A0D3 /* ProfileHistoryCell.swift */; };
+		6D7733F922632CD000C5A0D3 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7733F822632CD000C5A0D3 /* SettingsCell.swift */; };
 		6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */; };
 		6D9E4E8E2262055A00D44D1C /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */; };
 		6D9E4E9022623FAC00D44D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */; };
@@ -49,6 +52,9 @@
 		3A7DE577099CA26BD33CFB5C /* Pods-Skrrt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Skrrt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Skrrt/Pods-Skrrt.debug.xcconfig"; sourceTree = "<group>"; };
 		6D7733F02262BEC600C5A0D3 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		6D7733F22263004900C5A0D3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6D7733F42263282E00C5A0D3 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		6D7733F62263296B00C5A0D3 /* ProfileHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHistoryCell.swift; sourceTree = "<group>"; };
+		6D7733F822632CD000C5A0D3 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		6D9E4E872261FE2F00D44D1C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		6D9E4E8D2262055A00D44D1C /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				6D9E4E8F22623FAC00D44D1C /* MapViewController.swift */,
 				6D7733F02262BEC600C5A0D3 /* PostViewController.swift */,
 				6D7733F22263004900C5A0D3 /* ProfileViewController.swift */,
+				6D7733F42263282E00C5A0D3 /* FacebookViewController.swift */,
+				6D7733F62263296B00C5A0D3 /* ProfileHistoryCell.swift */,
+				6D7733F822632CD000C5A0D3 /* SettingsCell.swift */,
 			);
 			path = Skrrt;
 			sourceTree = "<group>";
@@ -413,14 +422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7733F72263296B00C5A0D3 /* ProfileHistoryCell.swift in Sources */,
 				6D7733F12262BEC600C5A0D3 /* PostViewController.swift in Sources */,
 				6D9E4E8E2262055A00D44D1C /* DetailsCell.swift in Sources */,
 				6DEBD4AD2261F1E9002E88B7 /* LoginViewController.swift in Sources */,
 				6DEBD4812261E710002E88B7 /* ViewController.swift in Sources */,
 				6D9E4E882261FE2F00D44D1C /* FeedViewController.swift in Sources */,
+				6D7733F52263282E00C5A0D3 /* FacebookViewController.swift in Sources */,
 				6DEBD47F2261E710002E88B7 /* AppDelegate.swift in Sources */,
 				6D7733F32263004900C5A0D3 /* ProfileViewController.swift in Sources */,
 				6D9E4E9022623FAC00D44D1C /* MapViewController.swift in Sources */,
+				6D7733F922632CD000C5A0D3 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

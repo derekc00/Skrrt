@@ -7,20 +7,27 @@
 //
 
 import UIKit
-import FacebookLogin
 
 
 class ProfileViewController: UIViewController {
 
+   
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var schoolLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
+        profileImage.setRounded()
         
-        view.addSubview(loginButton)
         // Do any additional setup after loading the view.
     }
+    
+    
     
 
     /*
