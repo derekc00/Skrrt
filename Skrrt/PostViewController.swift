@@ -52,6 +52,7 @@ class PostViewController: UIViewController {
     @IBOutlet weak var priceTextField: UITextField!
     
 
+
     
     @IBAction func valueChanged(_ sender: Any) {
         print(personType.selectedSegmentIndex)
