@@ -18,6 +18,8 @@ class SettingsCell: UITableViewCell {
     
     @IBOutlet weak var toggleSwitch: UISwitch!
     
+    var askforFacebook: Bool = false
+    
     var fbViewController: UIViewController = UIViewController()
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,18 +27,23 @@ class SettingsCell: UITableViewCell {
     }
 
     @IBAction func clickButton(_ sender: Any) {
-        let fbLoginManager: FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["email"], from: fbViewController) { (result, error) in
-            if (error == nil){
-                let fbLoginresult: FBSDKLoginManagerLoginResult = result!
-                if fbLoginresult.grantedPermissions != nil{
-                    if (fbLoginresult.grantedPermissions.contains("email")){
-                        self.GetFBUserData()
-                        fbLoginManager.logOut()
+        
+        if askforFacebook{
+            let fbLoginManager: FBSDKLoginManager = FBSDKLoginManager()
+            fbLoginManager.logIn(withReadPermissions: ["email"], from: fbViewController) { (result, error) in
+                if (error == nil){
+                    let fbLoginresult: FBSDKLoginManagerLoginResult = result!
+                    if fbLoginresult.grantedPermissions != nil{
+                        if (fbLoginresult.grantedPermissions.contains("email")){
+                            self.GetFBUserData()
+                            fbLoginManager.logOut()
+                        }
                     }
                 }
             }
         }
+        
+       
         
     }
     

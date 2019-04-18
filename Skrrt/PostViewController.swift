@@ -12,6 +12,14 @@ import Parse
 
 class PostViewController: UIViewController {
 
+    override func viewDidLoad() {
+    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
+        returnDate.isHidden = true
+        comingBackLabel.isHidden = true
+        
+    }
+    
     let suggestions = [ "CSU Bakersfield",
                         "CSU Channel Islands",
                         "CSU Chico",
@@ -71,9 +79,9 @@ class PostViewController: UIViewController {
         }
         else {
             print(":FDDSF")
-            comingBackLabel.isHidden = false
+            comingBackLabel.isHidden = true
             comingBackType.isHidden = false
-            returnDate.isHidden = false
+            returnDate.isHidden = true
             departureDate.isHidden = false
             seatsLabel.isHidden = false
             seatsTextField.isHidden = false
@@ -108,6 +116,9 @@ class PostViewController: UIViewController {
         return false
     }
 
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("A3")
@@ -146,7 +157,7 @@ class PostViewController: UIViewController {
         
         post.saveInBackground { (success, error) in
             if success{
-                self.dismiss(animated: true, completion: nil)
+                self.performSegue(withIdentifier: "post", sender: nil)
                 print("saved!")
             }else{
                 print("error: \(String(describing: error))")

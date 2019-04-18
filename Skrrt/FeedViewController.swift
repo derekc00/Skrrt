@@ -142,6 +142,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        
         let query = PFQuery(className: "Posts")
         query.includeKeys(["Author, Departure, Destination, Date, Price"])
         
@@ -157,13 +158,24 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         
-        //FILTER + SORT
-//        if startingSchool != ""{
-//            var arr = self.posts.filter {
-//                $0.departure.rangeOfString(startingSchool) != nil
-//            }
-//        }
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //FILTER + SORT
+        var filteredPosts = [PFObject]()
+        
+        print("count: ", self.posts.count)
+        print("starting school", startingSchool)
+        for post in self.posts{
+            let departure = post["Departure"] as! String
+            if departure.contains(startingSchool){
+                filteredPosts.append(post)
+            }
+        }
+        
+        print("final posts", filteredPosts)
         
     }
     
@@ -241,6 +253,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let myStringafd = formatter.string(from: yourDate!)
             
             cell.dateLabel.text = myStringafd
+            
+            cell.nameLabel.text = "Derek Chang"
         }
         else{
             
