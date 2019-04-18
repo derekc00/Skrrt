@@ -38,7 +38,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 if fbLoginresult.grantedPermissions != nil{
                     if (fbLoginresult.grantedPermissions.contains("email")){
                         self.GetFBUserData()
-                        fbLoginManager.logOut()
+//                        fbLoginManager.logOut()
                     }
                 }
             }

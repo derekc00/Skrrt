@@ -59,21 +59,27 @@ class FacebookViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as! SettingsCell
+        
         
         if indexPath.row == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell") as! SettingsCell
             cell.label.text = "facebook"
-            
-            
+            cell.askforFacebook = true
+            cell.fbViewController = self
+            return cell
         }
         else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell2") as! SettingsCell
             cell.label.text = schools[indexPath.row]
             cell.label.textColor = .black
             cell.label.font = UIFont(name: "HelveticaNeue", size: 14)
+            cell.askforFacebook = false
+            cell.fbViewController = self
+            return cell
         }
-        cell.fbViewController = self
         
-        return cell
+        
+        
     }
     
 
